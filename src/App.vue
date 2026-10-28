@@ -135,7 +135,7 @@ function importMacros() {
             </div>
         </div>
 
-        <div class="input-area mt-2.5 flex items-center rounded-lg p-1.5" style="background:#1f1f1f; border:1px solid #3c3c3c; box-shadow:0 4px 10px rgba(0,0,0,.3);">
+        <div class="input-area mt-3 flex items-center rounded-lg p-1.5" style="background:#1f1f1f; border:1px solid #3c3c3c; box-shadow:0 4px 10px rgba(0,0,0,.3);">
             <div style="padding: 8px 12px; color:#569cd6; font-weight:bold;">❯</div>
             <input
                 v-model="userInput"
@@ -186,5 +186,14 @@ function importMacros() {
                 </div>
             </div>
         </div>
+        
+        <button 
+            v-if="!store.isImmersive"
+            @click="store.drawerOpen = true" 
+            class="fixed bottom-[85px] right-[25px] w-[56px] h-[56px] rounded-full bg-[#ffd700] text-[#1e1e1e] text-[26px] flex justify-center items-center shadow-[0_4px_15px_rgba(0,0,0,0.5)] hover:scale-110 transition-transform z-50 cursor-pointer"
+            title="Open Macros"
+        >
+            📁
+        </button>
     </div>
 </template>
