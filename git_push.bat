@@ -25,6 +25,7 @@ echo [2/3] Committing changes (git commit)...
 git commit -m "%commit_msg%"
 
 echo [3/3] Pushing to GitHub (git push)...
+git pull origin main --rebase
 git push
 
 echo.
